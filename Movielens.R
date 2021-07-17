@@ -55,6 +55,6 @@ edx <- rbind(edx, removed)
 rm(dl, ratings, movies, test_index, temp, movielens, removed)
 
 
-#test
+#test2
 rows <- dim(edx)[1]
 columns <- dim(edx)[2]
