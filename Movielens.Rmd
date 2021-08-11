@@ -556,7 +556,7 @@ rmse_results %>% knitr::kable()
 ## Regularization
 
 
-In the initial data analysis, I observed that some movies were rated by only a few users. Therefore, these movies were greatly affected by few ratings.  A movie that has one rating of five means more that the user that only rated this movie liked it very much than that its really has an average of five. Without having many entries, the resulting average is not trustworthy.
+In the initial data analysis, I observed that some movies were rated by only a few users. Therefore, these movies were greatly affected by few ratings.  A movie that has one rating of five means more that the only user that rated this movie liked it very much than that it is really has an average rate of five. Without having many entries, the resulting average is not trustworthy.
 
 In order to constrain this effect,movies with large estimates from a small sample size, i will use regularization by implementing a penalty with a variable named lambda.
 

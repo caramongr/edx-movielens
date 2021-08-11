@@ -1,8 +1,7 @@
 ##########################################################
-# Create edx set, validation set (final hold-out test set)
+# HarvardX (PH125.9x) - Movielens Capstone Project - HarvardX (PH125.9x) - Konstantinos Liakopoulos
 ##########################################################
 
-# Note: this process could take a couple of minutes
 
 
 # Data Preparation
@@ -61,12 +60,11 @@ test_index <- createDataPartition(y = movielens$rating, times = 1, p = 0.1, list
 edx <- movielens[-test_index,]
 temp <- movielens[test_index,]
 
-# Make sure userId and movieId in validation set are also in edx set
 validation <- temp %>% 
   semi_join(edx, by = "movieId") %>%
   semi_join(edx, by = "userId")
 
-# Add rows removed from validation set back into edx set
+
 removed <- anti_join(temp, validation)
 edx <- rbind(edx, removed)
 
